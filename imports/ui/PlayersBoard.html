@@ -1,0 +1,76 @@
+<template name = "leaderboard">
+	<div>
+
+		{{#if currentUser}}
+			<div class ="wrapper">
+				{{#if count}}
+				<div>
+				  <label className = "checkbox">
+				<input className = "checkbox__box" type = "checkbox" />
+				Show hidden players</label>
+				</div>
+				{{/if}}
+
+				<ul>
+					{{#if count}}
+					{{#each player}}
+					<div class = "itemClassName">
+						<li class = "player {{selectedClass}} {{selectedPlayer}}">
+							<h3  class = "player__name"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>{{name}}</h3>
+
+							<h5 class = "title-bar__subtitle"> {{createdAt}}</h5>
+							<br/>
+							<h5 class = "title-bar__subtitle"> {{moment}}</h5>
+
+							<p class = "player__stats">{{score}}</p>
+
+							<div class = "player__actions">
+							<button class = "button button__round add__button" ><i class="fa fa-plus fa-2x" aria-hidden="true"></i></button>
+							<button class = "button button__round minus__button" ><i class="fa fa-minus fa-2x" aria-hidden="true"></i></button>
+							<button class = "button button__round delete__button"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button>
+							<button class = "button button__round hide__button">Hide</button>
+							<button class = "button button__round show__button"><i class="fa fa-eye fa-2x" aria-hidden="true"></i></button>
+							</div>
+						</li>
+
+					</div>
+
+					{{/each}}
+					{{else}}
+					<div className ="item">
+					  <p className = "item__message item__message__empty"> Add your first player</p>
+					</div>
+					{{/if}}
+
+					{{#if selectedPlayer}}
+				<li> Selected Player: {{selectedPlayer.name}}</li>
+
+				<li> Players: {{count}}</li>
+				<li>
+				<button class = "btn btn-success increment"> Give 5 Points</button>
+				<button class = "btn btn-warning decrement"> Take 5 Points</button>
+				<button class = "btn btn-danger remove">Remove Player</button>
+				<button class = "btn btn-danger removeAll">Remove All Players</button>
+				</li>
+
+
+				{{else}}
+				{{#if count}}
+				<li>No player selected</li>
+			{{/if}}
+
+				{{/if}}
+				</ul>
+{{ > addPlayerForm}}
+			</div>
+
+
+			{{else}}
+			<p> You must be logged in to see this content</p>
+			{{/if}}
+
+
+	</div>
+
+
+</template>

@@ -1,0 +1,9 @@
+<template name = "userProfile">
+<button class = "userButton">  See users </button>
+<ul>
+{{#each userList}}
+		<li class = "player {{selectedClass}}"> <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>  &#160;&#160;{{userList.username}}</li>
+{{/each}}
+	</ul>
+
+</template>
