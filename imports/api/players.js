@@ -42,7 +42,6 @@ Meteor.methods({
         visible:true,
         createdBy:currentUserId,
         createdAt:moment().format('DD/MM/YYYY h:mm a'),
-        moment:moment().fromNow()
         });
 
     }

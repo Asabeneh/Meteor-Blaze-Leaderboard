@@ -3,10 +3,6 @@ import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 
 import './PlayersBoard.html';
-// import './AddPlayer.html';
-// import './Player.js';
-// import './Player.html';
-
 import {Players } from '../api/players';
 
 Template.body.onCreated(function bodyOnCreated() {
@@ -74,9 +70,11 @@ Template.leaderboard.events({
       Meteor.call('removePlayer',selectedPlayer);
   //  });
 
-  }},
+  }
+},
   'click .removeAll':function(){
     if(confirm("Are you sure you like to delete all players?")){
+
     Meteor.call('removeAllPlayer');
     }
 }

@@ -28,8 +28,8 @@ if(err){
   }
   render(){
     return (
-<div className = "boxed-view">
-      <div className = "boxed-view__box">
+<div class = "boxed-view">
+      <div class = "boxed-view__box">
         <h1> Join Short Lnk</h1>
 
         <p>{this.state.count} </p>
@@ -38,7 +38,7 @@ if(err){
         <form onSubmit = {this.onSubmit.bind(this)} noValidate>
           <input type = "email" ref = "email" name = "email" placeholder = "E-mail"/>
           <input type = "password" ref = "password" name = "password" placeholder = "Password"/>
-          <button className = "button"> Create Account</button>
+          <button class = "button"> Create Account</button>
         </form>
         <Link to = "/">Have an account?</Link>
       </div>

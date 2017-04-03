@@ -5,8 +5,8 @@
 			<div class ="wrapper">
 				{{#if count}}
 				<div>
-				  <label className = "checkbox">
-				<input className = "checkbox__box" type = "checkbox" />
+				  <label class = "checkbox">
+				<input class = "checkbox__box" type = "checkbox" />
 				Show hidden players</label>
 				</div>
 				{{/if}}
@@ -16,11 +16,13 @@
 					{{#each player}}
 					<div class = "itemClassName">
 						<li class = "player {{selectedClass}} {{selectedPlayer}}">
-							<h3  class = "player__name"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>{{name}}</h3>
 
-							<h5 class = "title-bar__subtitle"> {{createdAt}}</h5>
-							<br/>
-							<h5 class = "title-bar__subtitle"> {{moment}}</h5>
+							<h3  class = "player__name">
+								<i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+								{{name}}
+								 <br/>
+								 	<span> {{createdAt}}</span>
+								</h3>
 
 							<p class = "player__stats">{{score}}</p>
 
@@ -29,7 +31,7 @@
 							<button class = "button button__round minus__button" ><i class="fa fa-minus fa-2x" aria-hidden="true"></i></button>
 							<button class = "button button__round delete__button"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button>
 							<button class = "button button__round hide__button">Hide</button>
-							<button class = "button button__round show__button"><i class="fa fa-eye fa-2x" aria-hidden="true"></i></button>
+
 							</div>
 						</li>
 
@@ -37,8 +39,8 @@
 
 					{{/each}}
 					{{else}}
-					<div className ="item">
-					  <p className = "item__message item__message__empty"> Add your first player</p>
+					<div class ="item">
+					  <p class = "item__message item__message__empty"> Add your first player</p>
 					</div>
 					{{/if}}
 
@@ -66,8 +68,10 @@
 
 
 			{{else}}
-			<p> You must be logged in to see this content</p>
-			{{/if}}
+			<div class = "wrapper">
+ <p class = "item__status-message">Login to see more features</p>
+			</div>
+		{{/if}}
 
 
 	</div>

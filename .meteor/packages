@@ -28,4 +28,5 @@ check
 fourseven:scss
 numeral:numeral
 momentjs:moment
-iron:router
+gwendall:auth-client-callbacks
+kadira:flow-router

@@ -5,7 +5,7 @@
 .fa-user-circle{
 	/*display:inline-block;*/
 	color:green;
-  display:inline-block;
+  /*display:inline-block;*/
   font-size: 25px;
   line-height: 25px;
   background-color:#333333;
@@ -43,4 +43,7 @@ background-color: red;
 }
 .minus__button:hover{
 background-color: orange;
+}
+span{
+	font-size: 1rem;
 }
