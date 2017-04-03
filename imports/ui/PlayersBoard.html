@@ -1,6 +1,5 @@
 <template name = "leaderboard">
 	<div>
-
 		{{#if currentUser}}
 			<div class ="wrapper">
 				{{#if count}}
@@ -68,8 +67,8 @@
 
 
 			{{else}}
-			<div class = "wrapper">
- <p class = "item__status-message">Login to see more features</p>
+			<div class ="item">
+				<p class = "item__message item__message__empty"> Login to see more features</p>
 			</div>
 		{{/if}}
 
