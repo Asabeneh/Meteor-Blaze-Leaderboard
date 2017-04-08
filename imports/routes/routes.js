@@ -1,33 +1,35 @@
-//
-// Router.route('/', {
-//     name: 'home',
-//     template: 'home'
-// });
-// Router.route('/login',{
-//   name:'login',
-//   template:'login'
-// });
-// Router.route('/signup',{
-//   name:'signup',
-//   template:'singup'
-// });
-//
-//
-//
-// Router.configure({
-//     layoutTemplate: 'main'
-// });
-
 FlowRouter.route('/',{
   name:'home',
   action(){
+
     BlazeLayout.render('HomeLayout');
   }
 });
-
-FlowRouter.route('/test',{
-  name:'home',
+FlowRouter.route('/posts',{
+  name:'posts',
   action(){
-    BlazeLayout.render('MainLayout',{main:'Test'});
+
+    BlazeLayout.render('MainLayout',{name:"Posts"});
+  }
+});
+FlowRouter.route('/messages',{
+  name:'messages',
+  action(){
+
+    BlazeLayout.render('MainLayout',{name:"Messages"});
+  }
+});
+FlowRouter.route('/chat-room',{
+  name:'chat-room',
+  action(){
+
+    BlazeLayout.render('MainLayout',{name:"ChatRoom"});
+  }
+});
+FlowRouter.route('/friends',{
+  name:'friends',
+  action(){
+
+    BlazeLayout.render('MainLayout',{name:"Friends"});
   }
 });
