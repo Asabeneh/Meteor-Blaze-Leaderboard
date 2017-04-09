@@ -2,40 +2,26 @@
 	<div>
 		{{#if currentUser}}
 			<div class ="wrapper">
-				{{#if count}}
-				<div>
-				  <label class = "checkbox">
-				<input class = "checkbox__box" type = "checkbox" />
-				Show hidden players</label>
-				</div>
-				{{/if}}
-
 				<ul>
 					{{#if count}}
 					{{#each player}}
 					<div class = "itemClassName">
-						<li class = "player {{selectedClass}} {{selectedPlayer}}">
-
-							<h3  class = "player__name">
-								<i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
-								{{name}}
-								 <br/>
-								 	<span> {{createdAt}}</span>
-								</h3>
-
-							<p class = "player__stats">{{score}}</p>
+						<div class = "player {{selectedClass}} {{selectedPlayer}}">
+							<div class = "player__stats">
+								<h3 class = "player__name"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i> {{name}}</h3>
+								<p class = "player__stats">
+								 place - {{score}} points
+								</p>
+								<span>{{createdAt}}</span>
+							</div>
 
 							<div class = "player__actions">
-							<button class = "button button__round add__button" ><i class="fa fa-plus fa-2x" aria-hidden="true"></i></button>
-							<button class = "button button__round minus__button" ><i class="fa fa-minus fa-2x" aria-hidden="true"></i></button>
-							<button class = "button button__round delete__button"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button>
-							<button class = "button button__round hide__button">Hide</button>
-
+								<button class = "button button__round add__button" ><i class="fa fa-plus fa-2x" aria-hidden="true"></i></button>
+								<button class = "button button__round minus__button" ><i class="fa fa-minus fa-2x" aria-hidden="true"></i></button>
+								<button class = "button button__round delete__button"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button>
 							</div>
-						</li>
-
+						</div>
 					</div>
-
 					{{/each}}
 					{{else}}
 					<div class ="item">
@@ -78,6 +64,4 @@
 
 
 	</div>
-
-
 </template>
