@@ -10,11 +10,10 @@
 							<div class = "player__stats">
 								<h3 class = "player__name"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i> {{name}}</h3>
 								<p class = "player__stats">
-								 place - {{score}} points
+								 {{calculatorPlayerPositions}}{{score}} points
 								</p>
 								<span>{{createdAt}}</span>
 							</div>
-
 							<div class = "player__actions">
 								<button class = "button button__round add__button" ><i class="fa fa-plus fa-2x" aria-hidden="true"></i></button>
 								<button class = "button button__round minus__button" ><i class="fa fa-minus fa-2x" aria-hidden="true"></i></button>
@@ -40,7 +39,6 @@
 				<button class = "btn btn-danger removeAll">Remove All Players</button>
 				</li>
 
-
 				{{else}}
 				{{#if count}}
 				<li>No player selected</li>
@@ -51,7 +49,6 @@
 {{ > addPlayerForm}}
 			</div>
 
-
 			{{else}}
 			<div class = "wrapper">
 				<div class ="item">
@@ -61,7 +58,6 @@
 			</div>
 
 		{{/if}}
-
 
 	</div>
 </template>
