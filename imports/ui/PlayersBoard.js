@@ -1,7 +1,5 @@
-
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
-
 import './PlayersBoard.html';
 import {Players } from '../api/players';
 
@@ -50,7 +48,6 @@ Template.leaderboard.events({
   'click .add__button':function(){
     var selectedPlayer = Session.get('selectedPlayer');
     Meteor.call('updateScore', selectedPlayer, 1);
-
   },
   'click .decrement':function(){
     var selectedPlayer = Session.get('selectedPlayer');
@@ -78,7 +75,5 @@ Template.leaderboard.events({
     Meteor.call('removeAllPlayer');
     }
 }
-
-
 
   });

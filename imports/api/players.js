@@ -1,9 +1,8 @@
 import { Meteor } from 'meteor/meteor';
 import { Mongo } from 'meteor/mongo';
-
+import {check} from "meteor/meteor"
 import SimpleSchema from 'simpl-schema';
 export const Players = new Mongo.Collection('players');
-
 
 if(Meteor.isServer){
 

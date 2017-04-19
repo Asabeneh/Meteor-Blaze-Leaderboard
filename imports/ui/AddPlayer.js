@@ -3,7 +3,6 @@ import { Template } from 'meteor/templating';
 import './AddPlayer.html';
 
 Template.addPlayerForm.events({
-
   'submit form':function(event){
     event.preventDefault();
 
@@ -16,11 +15,8 @@ Template.addPlayerForm.events({
     }
 
     var currentUserId = Meteor.userId();
-
     Meteor.call('createPlayer',playerNameVar,playerValueVar);
     event.target.playerName.value = "";
     event.target.playerValue.value = "";
-
   }
-
 });
